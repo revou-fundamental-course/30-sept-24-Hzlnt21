@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="hero">
+        <header>
+            <h1>Kalkulator Suhu</h1>
+            <p>Konversi suhu antara Celsius dan Fahrenheit dengan mudah.</p>
+            <a href="#form" class="cta-button">Coba Sekarang</a>
+        </header>
+        <div class="decorative-elements">
+            <div class="circle large"></div>
+            <div class="circle medium"></div>
+            <div class="circle small"></div>
+        </div>
+    </div>
+
+    <div class="container" id="form">
+        <div class="form-container">
+            <form id="temperature-form">
+                <div class="form-group">
+                    <label for="temperature">Masukkan Suhu:</label>
+                    <input type="number" id="temperature" name="temperature" placeholder="Contoh: 25" required>
+                </div>
+                <div class="form-group">
+                    <label for="conversion">Konversi:</label>
+                    <select id="conversion" name="conversion" required>
+                        <option value="c_to_f">Celsius ke Fahrenheit</option>
+                        <option value="f_to_c">Fahrenheit ke Celsius</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Konversi</button>
+                    <button type="button" id="reset">Reset</button>
+                    <button type="button" id="reverse">Reverse</button>
+                </div>
+            </form>
+        </div>
+        <div id="result" class="result hidden">
+            <h2>Hasil:</h2>
+            <p id="conversion-result"></p>
+            <p id="calculation"></p>
+        </div>
+        <div id="conversion-steps" class="conversion-steps">
+            <h3>Cara Konversi dari Celsius ke Fahrenheit</h3>
+            <p>Suhu \( S \) dalam derajat Fahrenheit \( (^oF) \) sama dengan suhu \( S \) dalam derajat Celsius \( (^oC) \) kali 9/5 tambah 32.</p>
+            <p>Rumus:</p>
+            <div class="formula">
+                <p>\( S(^oF) = (S(^oC) \times \frac{9}{5}) + 32 \)</p>
+            </div>
+            <p>Atau, dapat menggunakan rumus berikut:</p>
+            <div class="formula">
+                <p>\( S(^oF) = (S(^oC) \times 1.8) + 32 \)</p>
+            </div>
+
+            <h3>Cara Konversi dari Fahrenheit ke Celsius</h3>
+            <p>Suhu \( S \) dalam derajat Celsius \( (^oC) \) sama dengan suhu \( S \) dalam derajat Fahrenheit \( (^oF) \) dikurangi 32 lalu dikali 5/9.</p>
+            <p>Rumus:</p>
+            <div class="formula">
+                <p>\( S(^oC) = (S(^oF) - 32) \times \frac{5}{9} \)</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Hzlnt</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
